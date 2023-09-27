@@ -1,0 +1,309 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+/* ==================== Table header ========================*/
+.table .itp-header {
+    background: #F5F5F5;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.table .itp-header h1 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.table .itp-header-button {
+    display: flex;
+    gap: 10px;
+}
+
+.table .add-company-button{
+    background-color: #28a744;
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 35px;
+    padding: 0 12px;
+    font-size: 1.0em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    align-items: center;
+    display: flex;
+}
+
+.table .add-company-button:hover {
+    background: #00bd68;
+}
+
+/*Search bar design*/
+.table .itp-search-header{
+    margin-right: 40px;
+}
+
+.table .search-box{
+    display: flex;
+    align-items: center;
+}
+
+.table .search-box input[type="text"] {
+    padding: 6px;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 350px;
+    outline: none;
+}
+
+/* ==================== Table Content ========================*/
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background: #808080;
+    color: white;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 15px;
+    margin-top: 30px;
+    font-size: 0.6em;
+    font-family: 'Poppins';
+    width: 98%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #000080;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 16%;
+}
+
+/* ==================== Inside table, every row edit and delete button ========================*/
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/* ==================== Window Prompt Design (After select Add Company button) ========================*/
+.window-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cancelbtn,
+.confirmbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.cancelbtn:hover,
+.confirmbtn:hover {
+    opacity: 1;
+}
+
+.cancelbtn,
+.confirmbtn {
+    float: left;
+    width: 50%;
+}
+
+.cancelbtn {
+    background-color: #ccc;
+    color: black;
+}
+
+.confirmbtn {
+    background-color: #28a744;
+    ;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    margin: 20px;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.modal-content {
+    margin: 5% auto 15% auto;
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-box {
+    width: 85%;
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+.input-box label {
+    color: #333;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.window-button::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/*Dialog box*/
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

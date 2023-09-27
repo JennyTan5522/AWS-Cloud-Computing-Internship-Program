@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TARUMT - LOGIN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets/siteIcon.png" />
+	<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login">
+			<div class="wrap-login">
+				<div class="login-pic">
+					<img src="images/tarumt.png" alt="TARUMT Logo" style="margin-top:-800px;margin-left:200px;">
+					<img src="images/education.png" alt="Education">
+				</div>
+
+				<form class="login-form" action="login.php" method="post">
+					<span class="login-form-title">Login Information</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="STUDENT_ID" placeholder="User ID" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="PASSWORD" placeholder="Password" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<button type="submit" class="login-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+

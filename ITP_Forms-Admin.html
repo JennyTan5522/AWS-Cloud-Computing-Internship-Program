@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/siteIcon.png" />
+        <title> TARUMT - ITP Forms </title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="components/topNavBar.js" type="text/javascript" defer></script>
+        <script src="components/middleNavBar.js" type="text/javascript" defer></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/StockAd_header.js" type="text/javascript" defer></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            main{background-color: #F2F2F2;}
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
+            .column {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-top: -200px;
+                margin-left: 30px;
+            }
+
+            .column2 {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-left: 30px;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                margin: 8px;
+            }
+
+            .card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
+                margin: 8px;
+            }
+
+            .about-section {
+                padding-top: 20px;
+                text-align: center;
+                background-color: #8B9DA4;
+                color: black;
+                height: 450px;
+                background-image: url('assets/dashImg.jpg');
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .container img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .title {
+                color: black;
+                text-align: center;
+            }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+
+            /* mine */
+            .w3-container {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+
+            .tablink {
+                font-size: large;
+                font-weight: 500;
+                color: black;
+            }
+
+            .w3-panel {
+                margin-left: 0px;
+            }
+
+            .w3-card {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .w3-hover-light-grey:hover {
+                background-color: white!important;
+            }
+
+            .w3-hover-gray:hover {
+                background-color: rgba(214,214,214, 0.5)!important;
+                border-radius: 100px;
+            }
+
+            .title {
+                font-weight: bold;
+                text-align: left;
+            }
+
+            .overlay {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            #preview-close {
+                color: white;
+                background-color: transparent;
+            }
+
+            .attachments {
+                box-shadow: none; 
+                border: 1px solid lightgrey;
+            }
+
+            .control {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+            header {
+                font-size: 1.5rem;
+                color: #333;
+                font-weight: 500;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .cancelbtn, .confirmbtn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                margin-bottom: 0px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            .cancelbtn:hover, .confirmbtn:hover {
+                opacity: 1;
+            }
+
+            .cancelbtn, .confirmbtn {
+                float: left;
+                width: 50%;
+            }
+
+            .modal-content {
+                margin: 5% auto 15% auto;
+                position: relative;
+                max-width: 700px;
+                width: 100%;
+                background: #fff;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .modal-content :where(.input-box input, .select-box) {
+                position: relative;
+                height: 50px;
+                width: 100%;
+                outline: none;
+                font-size: 1rem;
+                color: #707070;
+                margin-top: 8px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 0 15px;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            .input-box {
+                width: 85%;
+                margin-top: 20px;
+                margin-left: 45px;
+            }
+
+            .input-box label {
+                color: #333;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            /* Clear floats */
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .overlay {
+                box-sizing: border-box;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background: #808080;
+                color: white;
+            }
+
+            .styled-table thead tr {
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th, .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #000080;
+            }
+
+            th:nth-child(1), td:nth-child(1) {
+                width: 30%;
+            }
+
+            th:nth-child(4), td:nth-child(4) {
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <header-component></header-component>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu"><middle-component></middle-component></div>
+                    <div class="sb-sidenav-footer">
+                        <!--pass in logged in user details-->
+                        <div class="small">Logged in as:</br> UserA</div>
+                        <a href="LogoutConfirmation.html"><i class="fas fa-sign-out-alt" id="sideBarIcon" style="float:right;margin-right:10px;"></i></a>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main style="height: 650px;">
+                    <div class="overlay" id="overlay-preview" onclick="off(event, 'overlay-preview')">
+                        <span onclick="this.parentElement.style.display='none'" id="preview-close" class="w3-button w3-display-topright"><img src="images/close_icon.png" height="15px" width="15px" /></span>
+                        <embed src="FOCS_StudF02 Parent Acknowledgement Form.pdf" id="preview-file" class="overlay-content" style="height: 709px; width: 880px; margin-left: 90px;" />
+                    </div>
+
+                    <div class="overlay" id="overlay-add-edit">
+                        <span onclick="this.parentElement.style.display='none'" id="add-edit-close" class="w3-button w3-display-topright" onclick="off(event, 'overlay-add-edit')"><img src="images/close_icon.png" height="15px" width="15px" /></span>
+                        <form class="modal-content overlay-content" style="margin-top: 70px;">
+                            <header id="form-header" style="margin-top: 30px; font-weight: bold;"></header>
+                            <div class="input-box">
+                                <label>Form Title</label>
+                                <input type="text" placeholder="Title" id="form-title" required />
+
+                            </div>
+                            <div class="input-box">
+                                <label>Upload File</label>
+                                <input type="file" id="form-file" style="border: none; padding-left: 3px;" value="FOCS_StudF02 Parent Acknowledgement Form.pdf" required />
+                            </div>
+                            <div class="clearfix" style="margin-top: 10px;">
+                                <button type="button" onclick="document.getElementById('overlay-add-edit').style.display='none'" class="cancelbtn w3-light-grey" style="background-color: #ccc!important;">Cancel</button>
+                                <button type="button" id="form-submit" onclick="off(event, 'overlay-add-edit')" class="confirmbtn w3-black">Confirm</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <h1 style="margin-left: 20px; margin-top: 10px;">ITP Forms</h1>
+                    <div class="w3-container">
+                        <div class="w3-row">
+                          <a href="javascript:void(0)" onclick="select(event, 'display-panel');">
+                            <div id="tab-display" class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Display</div>
+                          </a>
+                          <a href="javascript:void(0)" onclick="select(event, 'submissions-panel');">
+                            <div id="tab-submissions" class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Submissions</div>
+                          </a>
+                        </div>
+                        
+                        <div id="display-panel" class="w3-container panel" style="display:none; padding-left: 0px;">
+                            <div class="w3-panel w3-transparent w3-card w3-round-xlarge">
+                                <p class="title" id="display-title">Parent Acknowledgement Letter</p>
+                                <p id="display-file">FOCS_StudF02: Parent Acknowledgement Form.pdf</p>
+                                <img id="display-preview" src="images/preview_icon.png" style="height: 30px; width: 30px; margin-left: 5px; cursor: pointer;" onclick="on(event, 'overlay-preview')" />
+                                <a href="FOCS_StudF02 Parent Acknowledgement Form.pdf" target="_blank" download style="margin-left: 10px; text-decoration: none;">
+                                    <img src="images/download_icon.png" style="height: 20px; width: 20px;" />
+                                </a>
+                                <img src="images/edit_icon.png" id="display-edit" style="height: 20px; width: 20px; margin-left: 14px; cursor: pointer;" onclick="on(event, 'overlay-add-edit')" />
+                                <img src="images/delete_icon.png" style="height: 20px; width: 20px; margin-left: 12px; cursor: pointer;" />
+                            </div>
+                            <div>
+                                <button class="w3-black w3-round-large" id="display-add" style="padding: 5px 10px; margin-top: 10px;" onclick="on(event, 'overlay-add-edit')">
+                                    <i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 10px;"></i>
+                                    Add Form
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <div id="submissions-panel" class="w3-container w3-row panel" style="display:none; padding-left: 0px;">
+                            <div style="overflow: auto; height: 500px;">
+                                <table class="styled-table">
+                                    <thead>
+                                        <tr>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>
+                                                <input type="text" class="w3-bar-item w3-input" style="width: 80%; float: left;" placeholder="Search.." />
+                                                <button type="button" class="w3-dark-grey" style="width: 20%; height: 40px;"><i class="fa fa-search"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                            <th>Number of Files</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><a href="ITP_Forms_Submissions - Admin.html" style="text-decoration: none; color: black;">Yoon Liu Jun</a></td>
+                                        <td>Submitted</td>
+                                        <td>20/09/2023</td>
+                                        <td>3</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                      
+                      <script type="text/javascript">
+                            function selectDisplay() {
+                                document.getElementById("display-panel").style.display = "block";
+                                document.getElementById("tab-display").className += " w3-border-dark-grey";
+                            }
+
+                            function selectSubmission() {
+                                document.getElementById("submissions-panel").style.display = "block";
+                                document.getElementById("tab-submissions").className += " w3-border-dark-grey";
+                            }
+
+                            if (parent.document.URL.indexOf('?') != -1) {
+                                selectSubmission();
+                            }
+                            else {
+                                selectDisplay();
+                            }
+
+                            function select(evt, elementName) {
+                                    var i, x, tablinks;
+                                    x = document.getElementsByClassName("panel");
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    tablinks = document.getElementsByClassName("tablink");
+                                    for (i = 0; i < x.length; i++) {
+                                        tablinks[i].className = tablinks[i].className.replace(" w3-border-dark-grey", "");
+                                    }
+
+                                    document.getElementById(elementName).style.display = "block";
+                                    evt.currentTarget.firstElementChild.className += " w3-border-dark-grey";
+                            }
+
+                            function on(evt, elementId) {
+                                document.getElementById(elementId).style.display = "block";
+
+                                if (evt.currentTarget.id == "display-edit") {
+                                    document.getElementById("form-header").innerHTML = "Edit Existing Form";
+                                    document.getElementById("form-title").value = document.getElementById("display-title").innerHTML;
+                                    document.getElementById("form-file").value = "";
+                                    document.getElementById("form-file").required = false;
+                                }
+                                else {
+                                    document.getElementById("form-header").innerHTML = "Add New Form";
+                                    document.getElementById("form-title").value = "";
+                                }
+                            }
+
+                            function off(evt, elementId) {
+                                document.getElementById(elementId).style.display = "none";
+
+                                if (document.getElementById("form-header").innerHTML == "Edit Form") {
+                                    if (evt.currentTarget.id == "form-submit") {
+                                        document.getElementById("display-title").innerHTML = document.getElementById("form-title").value;
+
+                                        if (document.getElementById("form-file").value != undefined) {
+                                            document.getElementById("display-file").innerHTML = document.getElementById("form-file").files.item(0).name;
+                                            document.getElementById("preview-file").setAttribute('src', document.getElementById("form-file").files.item(0).name);
+                                        }
+                                    }
+                                }
+                            }
+                      </script>
+                </main>
+                <!--footer-->
+                <footer class="py-4 bg-light mt-auto">
+                    <footer-component></footer-component>
+                </footer>
+            </div>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

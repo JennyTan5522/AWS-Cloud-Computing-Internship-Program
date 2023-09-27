@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/siteIcon.png" />
+        <title> TARUMT - ITP Forms </title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="components/topNavBar.js" type="text/javascript" defer></script>
+        <script src="components/middleNavBar.js" type="text/javascript" defer></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/StockAd_header.js" type="text/javascript" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            main{background-color: #F2F2F2;}
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
+            .column {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-top: -200px;
+                margin-left: 30px;
+            }
+
+            .column2 {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-left: 30px;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                margin: 8px;
+            }
+
+            .card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
+                margin: 8px;
+            }
+
+            .about-section {
+                padding-top: 20px;
+                text-align: center;
+                background-color: #8B9DA4;
+                color: black;
+                height: 450px;
+                background-image: url('assets/dashImg.jpg');
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .container img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .title {
+                color: black;
+                text-align: center;
+            }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+
+            /* mine */
+            .w3-container {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+
+            .tablink {
+                font-size: large;
+                font-weight: 500;
+                color: black;
+            }
+
+            .w3-panel {
+                margin-left: 0px;
+            }
+
+            .w3-card {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .w3-hover-light-grey:hover {
+                background-color: white!important;
+            }
+
+            .w3-gray, .w3-hover-gray:hover {
+                background-color: rgba(214,214,214, 0.5)!important;
+                border-radius: 100px;
+            }
+
+            header {
+                font-size: 1.5rem;
+                color: #333;
+                font-weight: 500;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .cancelbtn, .confirmbtn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                margin-bottom: 0px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            .cancelbtn:hover, .confirmbtn:hover {
+                opacity: 1;
+            }
+
+            .cancelbtn, .confirmbtn {
+                float: left;
+                width: 50%;
+            }
+
+            .modal-content {
+                margin: 5% auto 15% auto;
+                position: relative;
+                max-width: 700px;
+                width: 100%;
+                background: #fff;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .modal-content :where(.input-box input, .select-box) {
+                position: relative;
+                height: 50px;
+                width: 100%;
+                outline: none;
+                font-size: 1rem;
+                color: #707070;
+                margin-top: 8px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 0 15px;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            .input-box {
+                width: 85%;
+                margin-top: 20px;
+                margin-left: 45px;
+            }
+
+            .input-box label {
+                color: #333;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            /* Clear floats */
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .title {
+                font-weight: bold;
+                text-align: left;
+            }
+
+            .overlay {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            #preview-close {
+                color: white;
+                background-color: transparent;
+            }
+
+            .attachments {
+                box-shadow: none; 
+                border: 1px solid lightgrey;
+            }
+
+            .attached {
+                cursor: pointer;
+            }
+
+            .attached:hover {
+                text-decoration: underline;
+            }
+
+            .control {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+            li {
+                cursor: pointer;
+            }
+
+            h5 {
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <header-component></header-component>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu"><middle-component></middle-component></div>
+                    <div class="sb-sidenav-footer">
+                        <!--pass in logged in user details-->
+                        <div class="small">Logged in as:</br> UserA</div>
+                        <a href="LogoutConfirmation.html"><i class="fas fa-sign-out-alt" id="sideBarIcon" style="float:right;margin-right:10px;"></i></a>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main style="height: 650px;">
+                    <div class="overlay" id="overlay-edit">
+                        <span onclick="this.parentElement.style.display='none'" id="create" class="w3-button w3-display-topright" onclick="off()"><img src="images/close_icon.png" height="15px" width="15px" /></span>
+                        <form class="modal-content overlay-content" style="margin-top: 40px;">
+                            <header id="form-header" style="margin-top: 30px; font-weight: bold;">Edit Submission</header>
+                            <div class="input-box">
+                                <label>Submission Title</label>
+                                <input type="text" placeholder="Title" id="form-title" required />
+                            </div>
+                            <div class="input-box">
+                                <label>Description</label>
+                                <input type="text" placeholder="Description" id="form-description" required />
+                            </div>
+                            <div class="input-box">
+                                <label>Due Date</label>
+                                <input type="datetime-local" id="form-date" required />
+                            </div>
+                            <div class="clearfix" style="margin-top: 30px;">
+                                <button type="button" onclick="off()" class="cancelbtn w3-light-grey" style="background-color: #ccc!important;">Cancel</button>
+                                <button type="button" id="form-submit" onclick="update()" class="confirmbtn w3-black">Confirm</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="w3-row">
+                        <div class="w3-col s9">
+                            <h1 style="margin-left: 20px; margin-top: 10px;">Report Submissions</h1>
+                        </div>
+                        <div class="w3-col s3">
+                            <a id="submissions-return" onclick="setDisplay()">
+                                <button class="w3-black w3-round-large" style="padding: 5px 15px; margin-top: 15px; margin-left: 20px;">
+                                    <i class="fas fa-arrow-alt-circle-left" aria-hidden="true" style="margin-right: 10px;"></i>View Submissions
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-container w3-row" style="padding-left: 0px;">
+                            <div class="w3-col s9" id="submissions-details" style="padding-right: 40px;">
+                                <div class="w3-row">
+                                    <div class="w3-col s11">
+                                        <h5 id="details-title">Progress Report 1 Submission</h5>
+                                    </div>
+                                    <div class="w3-col s1">
+                                        <div class="w3-hover-gray" id="submissions-options-icon" style="float: right; text-align-last: center; padding-top: 3px; cursor: pointer; width: 30px; height: 30px;" onclick="displayOptions()">
+                                            <i class='fas fa-ellipsis-v' style="cursor: pointer;"></i>
+                                        </div>
+                                        
+                                        
+                                        <div id="submissions-options" class="w3-dropdown-content w3-bar-block w3-round-large w3-border w3-light-grey" style="padding-top: 5px; padding-bottom: 5px; min-width: 80px; top: 113px; right: 319px;">
+                                            <a href="#" class="w3-bar-item w3-button w3-light-grey" onclick="on()">Edit</a>
+                                            <a href="#" class="w3-bar-item w3-button w3-light-grey">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr style="width: 100%; " />
+                                <p style="padding-top: 5px; font-weight: 500;"><span>Due Date: </span><span id="details-date">30 November 2023 12:00AM</span></p>
+                                <p id="details-description">
+                                    Please a report about the work that you have done within the first month of your internship. 
+                                    Do make sure that you do not include any private company information.
+                                </p>
+                            </div>
+
+                            <div class="w3-col s9" id="file-preview-div" style="display: none;">
+                                <embed src="FOCS_StudF01 Indemnity Letter.pdf" id="file-preview" style="width: 97%; height: 540px;" />
+                            </div>
+    
+                            <div class="w3-col s3">
+                                <div class="w3-row" style="overflow: auto; height: 250px;">
+                                    <ul class="w3-ul w3-hoverable" id="submitted-students">
+                                        <li><h5>Submitted</h5></li>
+                                        <li onclick="getFile('FOCS_StudF01 Indemnity Letter.pdf')">Jill</li>
+                                        <li>Eve</li>
+                                        <li>Adam</li>
+                                    </ul>
+        
+                                    <ul class="w3-ul w3-hoverable" id="pending-students">
+                                        <li><h5>Pending</h5></li>
+                                        <li>Jill</li>
+                                        <li>Eve</li>
+                                        <li>Adam</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="w3-row w3-container" style="padding-left: 10px; padding-top: 20px;">
+                                    <h5>Feedback</h5>
+                                    <textarea class="input-box" style="width: 100%; height: 180px; margin-top: 8px; margin-left: 0px;"></textarea>
+                                    <button class="w3-black w3-round-large" style="padding: 5px 10px; margin-top: 10px; margin-left: 155px;">
+                                        Send
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                      
+                    <script type="text/javascript">
+                        function displayOptions() {
+                            var x = document.getElementById("submissions-options");
+
+                            if (x.className.indexOf("w3-show") == -1) { 
+                                x.className += " w3-show";
+                                document.getElementById("submissions-options-icon").className = "w3-gray";
+                            } else {
+                                x.className = x.className.replace(" w3-show", "");
+                                document.getElementById("submissions-options-icon").className = "w3-hover-gray";
+                            }
+                        }
+
+                        function getFile(fileName) {
+                            document.getElementById("submissions-details").style.display = "none";
+                            document.getElementById("file-preview-div").style.display = "block";
+                            document.getElementById("file-preview").setAttribute('src', fileName);
+                        }
+
+                        function datetimeLocal(datetime) {
+                            const dt = new Date(datetime);
+                            dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+                            return dt.toISOString().slice(0, 16);
+                        }
+
+                        function getMonth(month) {
+                            var months = [
+                                'January',
+                                'February',
+                                'March',
+                                'April',
+                                'May',
+                                'June',
+                                'July',
+                                'August',
+                                'September',
+                                'October',
+                                'November',
+                                'December'
+                            ];
+
+                            if (/^[0-9]*$/.test(month)) {
+                                return months[month - 1];
+                                
+                            }
+                            else {
+                                return months.indexOf(month) + 1;
+                            }
+                        }
+
+                        function on() {
+                            document.getElementById('overlay-edit').style.display = "block";
+                            document.getElementById('form-title').value = document.getElementById('details-title').innerHTML;
+                            document.getElementById('form-description').value = document.getElementById('details-description').innerHTML.trim();
+
+                            var [day, month, year, time] = document.getElementById('details-date').innerHTML.split(' ');
+                            month = getMonth(month);
+                            
+                            var [hour, minute] = time.slice(0, -2).split(':');
+
+                            if (time.slice(-2) == "PM") {
+                                hour = parseInt(hour) + 12;
+
+                                if (hour == 24) {
+                                    hour = 12;
+                                }
+                            }
+                            else {
+                                if (hour == 12) {
+                                    hour = 0;
+                                }
+                            }
+
+                            hour = String(hour);
+
+                            document.getElementById('form-date').value = datetimeLocal(year + "-" + month + "-" + day + " " + hour + ":" + minute);
+                        }
+
+                        function off() {
+                            document.getElementById('overlay-edit').style.display = "none";
+                            displayOptions();
+                        }
+
+                        function update() {
+                            document.getElementById('details-title').innerHTML = document.getElementById('form-title').value;
+                            document.getElementById('details-description').innerHTML = document.getElementById('form-description').value;
+
+                            var [date, time] = document.getElementById('form-date').value.split('T');
+                            
+                            var [year, month, day] = date.split('-');
+                            month = getMonth(month);
+
+                            var [hour, minute] = time.split(':');
+
+                            var period;
+                            if (hour >= 12) {
+                                period = "PM";
+                                
+                                if (hour > 12) {
+                                    hour = String(parseInt(hour) - 12).padStart(2, '0');
+                                }
+                            }
+                            else {
+                                period = "AM";
+
+                                if (hour == 0) {
+                                    hour = String(parseInt(hour) + 12).padStart(2, '0');
+                                }
+                            }
+
+                            document.getElementById('details-date').innerHTML = day + " " + month + " " + year + " " + hour + ":" + minute + period;
+
+                            document.getElementById('overlay-edit').style.display = "none";
+                            displayOptions();
+                        }
+
+                        function setDisplay() {
+                            if (document.getElementById('submissions-details').style.display == "block") {
+                                window.open('Report_Submission - Admin.html', '_self');
+                            }
+                            else {
+                                document.getElementById('file-preview-div').style.display = "none";
+                                document.getElementById('submissions-details').style.display = "block";
+                            }
+                        }
+                    </script>
+                </main>
+                <!--footer-->
+                <footer class="py-4 bg-light mt-auto">
+                    <footer-component></footer-component>
+                </footer>
+            </div>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

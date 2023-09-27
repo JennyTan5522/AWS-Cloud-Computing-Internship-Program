@@ -1,0 +1,183 @@
+.enrollment {
+  margin:50px 200px 200px 200px;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.enrollment header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.enrollment .form {
+  margin-top: 30px;
+}
+
+.form .input-box,
+#programme,
+.box-header,
+#course,
+#course-focs,
+#course-fafb,
+#course-fobe,
+#course-foet,
+#course-fcci,
+#course-fssh,
+.address {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label,
+#programme,
+.box-header,
+#course,
+#course-focs,
+#course-fafb,
+#course-fobe,
+#course-foet,
+#course-fcci,
+#course-fssh {
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box),
+#programme,
+#course,
+#course-focs,
+#course-fafb,
+#course-fobe,
+#course-foet,
+#course-fcci,
+#course-fssh {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus,
+#programme,
+#course,
+#course-focs,
+#course-fafb,
+#course-fobe,
+#course-foet,
+#course-fcci,
+#course-fssh
+ {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .enrollment-column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .gender-box,
+.form .transport-box {
+  margin-top: 20px;
+}
+
+.gender-box h3,
+.transport-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.gender-option, .gender),
+.form :where(.transport-option, .transport) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .gender,
+.transport {
+  column-gap: 5px;
+}
+
+.gender input,
+.transport input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+
+.gender label,
+.transport label {
+  color: #707070;
+}
+
+.transport label {
+  color: #707070;
+}
+
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #28a744;
+  /* background: #4169E1; */
+}
+
+.form button:hover {
+  background: #00bd68;
+}
+
+.box-header {
+  font-weight: bold;
+  background-color: #DCDCDC;
+  text-align: center;
+  height: 50px;
+  padding-top: 12px;
+  font-size: large;
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .enrollment-column {
+    flex-wrap: wrap;
+  }
+
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}

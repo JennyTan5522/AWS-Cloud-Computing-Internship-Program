@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/siteIcon.png" />
+        <title> TARUMT - ITP Forms </title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="components/topNavBar.js" type="text/javascript" defer></script>
+        <script src="components/middleNavBar.js" type="text/javascript" defer></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+        <script src="components/StockAd_header.js" type="text/javascript" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            main{background-color: #F2F2F2;}
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
+            .column {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-top: -200px;
+                margin-left: 30px;
+            }
+
+            .column2 {
+                float: left;
+                width: 30%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+                margin-left: 30px;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                margin: 8px;
+            }
+
+            .card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
+                margin: 8px;
+            }
+
+            .about-section {
+                padding-top: 20px;
+                text-align: center;
+                background-color: #8B9DA4;
+                color: black;
+                height: 450px;
+                background-image: url('assets/dashImg.jpg');
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .container img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .title {
+                color: black;
+                text-align: center;
+            }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+
+            /* mine */
+            .w3-container {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+
+            .tablink {
+                font-size: large;
+                font-weight: 500;
+                color: black;
+            }
+
+            .w3-panel {
+                margin-left: 0px;
+            }
+
+            .w3-card {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .w3-hover-light-grey:hover {
+                background-color: white!important;
+            }
+
+            .w3-hover-gray:hover {
+                background-color: rgba(214,214,214, 0.5)!important;
+                border-radius: 100px;
+            }
+
+            .title {
+                font-weight: bold;
+                text-align: left;
+            }
+
+            #overlay {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            #preview-close {
+                color: white;
+                background-color: transparent;
+            }
+
+            .attachments {
+                box-shadow: none; 
+                border: 1px solid lightgrey;
+            }
+
+            .attached:hover {
+                text-decoration: underline;
+            }
+
+            .control {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <header-component></header-component>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu"><middle-component></middle-component></div>
+                    <div class="sb-sidenav-footer">
+                        <!--pass in logged in user details-->
+                        <div class="small">Logged in as:</br> UserA</div>
+                        <a href="LogoutConfirmation.html"><i class="fas fa-sign-out-alt" id="sideBarIcon" style="float:right;margin-right:10px;"></i></a>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main style="height: 650px;">
+                    <div id="overlay" onclick="off()">
+                        <span onclick="this.parentElement.style.display='none'" id="overlay-close" class="w3-button w3-display-topright"><img src="images/close_icon.png" height="15px" width="15px" /></span>
+                        <embed src="FOCS_StudF02 Parent Acknowledgement Form.pdf" style="height: 709px; width: 880px; margin-left: 90px;">
+                    </div>
+
+                    <h1 style="margin-left: 20px; margin-top: 10px;">ITP Forms</h1>
+                    <div class="w3-container">
+                        <div class="w3-row">
+                          <a href="javascript:void(0)" onclick="select(event, 'display-panel');">
+                            <div id="tab-display" class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Display</div>
+                          </a>
+                          <a href="javascript:void(0)" onclick="select(event, 'submit-panel');">
+                            <div id="tab-submit" class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Submit</div>
+                          </a>
+                        </div>
+                        
+                        <div id="display-panel" class="w3-container panel" style="display:none; padding-left: 0px;">
+                            <div class="w3-panel w3-transparent w3-card w3-round-xlarge">
+                                <p class="title">Parent Acknowledgement Letter</p>
+                                <p>FOCS_StudF02: Parent Acknowledgement Form.pdf</p>
+                                <img id="display-preview" src="images/preview_icon.png" style="height: 30px; width: 30px; margin-left: 5px; cursor: pointer;" onclick="on()" />
+                                <a href="FOCS_StudF02 Parent Acknowledgement Form.pdf" target="_blank" download>
+                                    <img src="images/download_icon.png" style="height: 20px; width: 20px; margin-left: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                      
+                        <div id="submit-panel" class="w3-container w3-row panel" style="display:none; padding-left: 0px; padding-top: 10px;">
+                            <div class="w3-col s8">
+                                <h5>ITP Forms Submission</h5>
+                                <hr style="width: 200px; " />
+                                <p style="padding-top: 5px;">Due Date: 30 November 2023</p>
+                            </div>
+
+                            <div class="w3-col s4">
+                                <h5 style="padding-left: 30px;">Attachments</h5>
+                                <div class="w3-panel w3-transparent w3-card w3-round-xlarge" style="padding: 25px;">
+                                    <div class="w3-row w3-card w3-round-large attachments">
+                                        <div class="w3-col s10 attached" style="padding-left: 15px; word-wrap: break-word; font-weight: 500;" onclick="on()">FOCS_StudF02 Parent Acknowledgement Form.pdf</div>
+                                        <div class="w3-col s2" style="margin-top: 3px; cursor: pointer;">
+                                            <div class="w3-hover-gray" style="margin-right: 7px; padding: 5px; padding-bottom: 7px;"><img src="images/close_icon.png" height="15px" width="15px" style="position: relative; top: 25%; left: 25%;" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="w3-row w3-card w3-round-large w3-hover-gray attachments control" style="border-radius: 0%;" onclick="document.getElementById('attachment-upload').click();">
+                                        <div style="font-weight: 500; text-align: center;">
+                                            <input type="file" id="attachment-upload" style="display: none;" />
+                                            <img src="images/add_icon.png" height="15px" width="15px" style="margin-right: 5px; margin-bottom: 3px;" />
+                                            Upload
+                                        </div>
+                                    </div>
+                                    <div class="w3-row w3-card w3-round-large w3-black attachments control" style="border-radius: 0%;">
+                                        <div style="text-align: center; font-weight: 500;">Submit</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                      </div>
+                      
+                      <script type="text/javascript">
+                            function selectDisplay() {
+                                document.getElementById("display-panel").style.display = "block";
+                                document.getElementById("tab-display").className += " w3-border-dark-grey";
+                            }
+
+                            selectDisplay();
+
+                            function on() {
+                                document.getElementById("overlay").style.display = "block";
+                            }
+
+                            function off() {
+                                document.getElementById("overlay").style.display = "none";
+                            }
+
+                            function select(evt, elementName) {
+                                    var i, x, tablinks;
+                                    x = document.getElementsByClassName("panel");
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    tablinks = document.getElementsByClassName("tablink");
+                                    for (i = 0; i < x.length; i++) {
+                                        tablinks[i].className = tablinks[i].className.replace(" w3-border-dark-grey", "");
+                                    }
+
+                                    document.getElementById(elementName).style.display = "block";
+                                    evt.currentTarget.firstElementChild.className += " w3-border-dark-grey";
+                            }
+                      </script>
+                </main>
+                <!--footer-->
+                <footer class="py-4 bg-light mt-auto">
+                    <footer-component></footer-component>
+                </footer>
+            </div>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
