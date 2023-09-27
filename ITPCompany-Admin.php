@@ -12,7 +12,7 @@ $result = mysqli_query($con, $query);
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/siteIcon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://tarumtwebimagebucket.s3.us-east-1.amazonaws.com/siteIcon.png" />
     <title>Internship ITP</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
@@ -72,7 +72,7 @@ $result = mysqli_query($con, $query);
             background-color: #8B9DA4;
             color: black;
             height: 450px;
-            background-image: url('assets/dashImg.jpg');
+            background-image: url('https://tarumtwebimagebucket.s3.us-east-1.amazonaws.com/dashImg.jpg');
         }
 
         .container {
