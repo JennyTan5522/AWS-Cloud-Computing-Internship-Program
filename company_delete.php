@@ -1,5 +1,5 @@
 <?php
-include 'dbinfo.inc';
+include 'connect.php';
 
 //Access the parameter from URL
 if (isset($_GET['companyDeleteId'])) {
