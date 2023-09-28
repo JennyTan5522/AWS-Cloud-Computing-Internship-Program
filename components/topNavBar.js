@@ -10,7 +10,7 @@ class Header extends HTMLElement {
         </head>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <img src="assets/logo.png" style="height:52px;width:auto">
+            <img src="https://tarumtwebimagebucket.s3.us-east-1.amazonaws.com/logo.png" style="height:52px;width:auto">
            
 
         `;
